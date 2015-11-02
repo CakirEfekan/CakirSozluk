@@ -1,0 +1,345 @@
+html, body{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	background:rgb(205, 206, 208); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h2 { 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 30px; 
+	font-weight: 300; 
+	line-height: 32px; 
+	margin: 0 0 72px; 
+text-decoration:none;	
+}
+a{
+	text-decoration:none;
+	color:#337AB7;
+}
+.h1 {
+	font-family: 'Helvetica Neue';
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	margin-top:5px;
+	padding:0;
+}
+.h3 {
+	font-family: 'Helvetica Neue';
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 300;
+	line-height: 15.4px;
+	margin-top:12px;
+	padding:0;
+}
+.p {
+	font-family: 'Helvetica Neue';
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+.blockquote {
+	font-family: 'Helvetica Neue';
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+.pre {
+	font-family: 'Helvetica Neue';
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+.menu{
+	width:100%;
+	height:60px;
+	border-style:;
+	top:0px;
+	position:absolute;
+	margin:0px;
+	padding:0px;
+	background:rgb(125, 193, 140);
+	
+}
+.menuic{
+	position:relative;
+	left:240px;
+	margin-top:10px;
+	
+}
+.logo{
+	height:60px;
+    background-repeat: no-repeat;
+	float:left;	
+	cursor:pointer;
+	position:relative;
+	
+}
+.icmenu{
+	
+	margin:5px;
+	float:left;
+	position:relative;
+	left:150px;
+}
+.sidebar{
+	position:relative;
+	top:60px;
+	height:calc(100% - 100px);
+	width:240px;
+	border-style:;
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	float:left;
+	
+}
+.home::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+.home::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.home::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.listeyenile{
+	margin-top:10px;
+}
+.entryliste ul{
+	margin:0px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	padding:0px;
+}
+.entryliste ul li{
+	    list-style: none;
+		padding-top:5px;
+		padding-bottom:5px;
+		margin:0;
+		margin-top:2;
+}
+.entryliste ul li:hover{
+	
+	background:rgba(238, 238, 238, 0.44);
+}
+.entryliste ul li a{
+	width:100%;
+}
+.adetentry{
+	margin:0;
+	margin-left:2px;
+	margin-right:2px;
+	width:100%;
+}
+.adetentry a, .adetentry a:visited{
+		text-decoration:none;
+		color:#155F15;
+}
+.home{
+
+	height:calc(100% - 100px);
+	width:calc(100% - 253px);
+	border-style:;
+	float:left;
+	position:relative;
+	top:90px;
+	left:5px;
+		overflow-y:auto;
+}
+.baslik{
+	position:relative;
+	left:40px;
+	top:10px;
+	width:auto;
+}
+.entryler{
+	margin-left:5px;
+}
+.entrybilgi{
+	margin-top:5px;
+	position:relative;
+	right:0px;
+
+	float:right;
+}
+.entrykontrol{
+	
+	float:right;
+		margin-top:5px;
+		margin-right:15px;
+	padding:0px;
+	
+}
+.numero{
+	width:20px;
+	float:left;
+}
+.sagkisim{
+	margin:0;
+	padding:0;
+	height:calc(100% - 10px);
+	left:10px;
+	width:230px;
+	top:2px;
+	position:relative;
+	border-style:;
+	float:left;
+}
+.icerik{
+	float:left;
+}
+.icerik{
+	
+	width:calc(100% - 253px);
+
+	height:100%;
+}
+.buton{
+	
+	    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px  transparent;
+    border-radius: 4px;
+	color: #fff !important;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+	    margin-top: 5px;
+    margin-bottom: 5px;
+			padding-top:5px;
+		padding-bottom:5px;
+}
+.btn{
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px  transparent;
+    border-radius: 4px;
+}
+.btn-primary{
+	    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+.yuklen{
+	
+	margin:0px;
+	padding:0px;
+	display:none;
+	top: 10px;
+    position: relative;
+
+}
+.listeyenile{
+	
+	margin-left:80px;
+	
+}
+.entryicerik{
+	
+	color:rgba(0, 0, 0, 0.72)
+	
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+input{
+	
+	    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.btn-bs{
+	
+	background:transparent;
+	
+}
