@@ -1,0 +1,2 @@
+# CakirSozluk
+Bir Sözlük Scripti
