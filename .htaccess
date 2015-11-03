@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^baslik/([a-zA-Z0-9_-]+)--([a-zA-Z0-9_-]+)$ index.php?id=$2&getir=baslik [L],
+RewriteRule ^baslik/([a-zA-Z0-9_-]+)--([a-zA-Z0-9_-]+)/$ index.php?id=$2&getir=baslik [L],
+RewriteRule ^yazar/([a-zA-Z0-9_-]+)/$ ?getir=yazar&kim=$1 [L],
+RewriteRule ^yazar/([a-zA-Z0-9_-]+)$ ?getir=yazar&kim=$1 [L],
+RewriteRule ^baslikac$ ?getir=baslikac [L]

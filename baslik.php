@@ -46,24 +46,25 @@ else{ }
 
 <div class="icerik">
 		<div class="baslik">
-			<a href="?id=<?php echo $_GET['id'] ?>&getir=baslik"><h2><?php echo $satir['isim'] ?></h2></a>
+			<a href="?id=<?php echo $_GET['id'] ?>&getir=baslik"><h2><?php echo htmlspecialchars($satir['isim']); ?></h2></a>
 		</div>
 		<div class="entryler">
 		<?php 
 			$id = 0;
 			foreach($satirlar as $row){
-			
+			$row['entry'] = htmlspecialchars($row['entry']);
 			$id++;
+			$yazarlink = preg_replace('# #', '-', $row['yazar']);
 		?>
 		<div class="entry" id="<?php echo $id ?>">
 			<div class="entryicerik"><div class="numero"><b><?php echo $id ?></b>.</div> <?php echo $row['entry'] ?>
 			</div>
 			<div class="entrybilgi">
 				<div class="entrytarih"><a href=""><?php echo $row['tarih'] ?></a></div>
-				<div class="entryyazar"><a href="<?php echo $adres ?>/?getir=yazar&kim=<?php echo $row['yazar'] ?>"><?php echo $row['yazar'] ?></a></div>
+				<div class="entryyazar"><a href="<?php echo $adres ?>/yazar/<?php echo $yazarlink ?>"><?php echo $row['yazar'] ?></a></div>
 			</div>
 			<?php if($row['yazar']==$_SESSION['user']){?>
-					<div class="entrykontrol"><form action="index.php?getir=entrymeselesi" method="post"><input type="hidden" name="id" value="<?php echo $row['id'] ?>"><button class="btn btn-bs" name="gonder" value="yoket" href="">Sil</button> <button name="gonder" value="yenidenyarat" class="btn btn-bs" href="">Edit</button></form></div>
+					<div class="entrykontrol"><form action="<?php $adres ?>/index.php?getir=entrymeselesi" method="post"><input type="hidden" name="id" value="<?php echo $row['id'] ?>"><button class="btn btn-bs" name="gonder" value="yoket" href="">Sil</button> <button name="gonder" value="yenidenyarat" class="btn btn-bs" href="">Edit</button></form></div>
 				<?php } ?>
 		</div>
 		

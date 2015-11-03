@@ -1,6 +1,24 @@
 <?php 
 require('vt.php');
+	function temiz($veri)
+{
+$veri =str_replace("`","",$veri);
+$veri =str_replace("=","",$veri);
+$veri =str_replace("&","",$veri);
+$veri =str_replace("%","",$veri);
+$veri =str_replace("!","",$veri);
+$veri =str_replace("#","",$veri);
+$veri =str_replace("<","",$veri);
+$veri =str_replace(">","",$veri);
+$veri =str_replace("'","",$veri);
+$veri =str_replace("*","",$veri);
+$veri =str_replace("And","",$veri);
+$veri =str_replace("chr(34)","",$veri);
+$veri =str_replace("chr(39)","",$veri);
+return $veri;
 
+
+}
 function MakeUnique($length=16) {
            $salt       = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
            $len        = strlen($salt);
@@ -27,7 +45,7 @@ elseif($query1->rowCount()){
 	echo "eposta var";
 }
 else {
-	
+	$kuladi = temiz($kuladi);
 		$sql = $db->prepare('INSERT INTO yazarlar (kuladi,sifre,eposta,epostakod) VALUES (?,?,?,?)');
     $ekle = $sql->execute(array(
  

@@ -71,6 +71,30 @@ if(!$_POST['entry'] == null){
 	
 	$baslik = $_POST['baslik'];
 	$baslik = mb_strtolower($baslik , 'UTF8');
+	
+	
+	function temiz($veri)
+{
+$veri =str_replace("`","",$veri);
+$veri =str_replace("=","",$veri);
+$veri =str_replace("&","",$veri);
+$veri =str_replace("%","",$veri);
+$veri =str_replace("!","",$veri);
+$veri =str_replace("#","",$veri);
+$veri =str_replace("<","",$veri);
+$veri =str_replace(">","",$veri);
+$veri =str_replace("*","",$veri);
+$veri =str_replace("And","",$veri);
+$veri =str_replace("chr(34)","",$veri);
+$veri =str_replace("chr(39)","",$veri);
+return $veri;
+
+
+}
+
+$baslik = temiz($baslik);
+	
+	
 	$entry= mb_strtolower($entry, 'UTF8');
 	$yazar = $_SESSION['user'];
 	$vt = $db->prepare('INSERT INTO basliklar (isim,baslatan) VALUES (?,?)');

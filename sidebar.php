@@ -1,6 +1,16 @@
-<?php require('vt.php'); ?>
+<?php require('vt.php');
 
-<link rel="stylesheet" href="css/style.css"/>
+function replace_tr($text) {
+$text = trim($text);
+$search = array('Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü',' ', '\'');
+$replace = array('c','c','g','g','i','i','o','o','s','s','u','u','-','-');
+$new_text = str_replace($search,$replace,$text);
+return $new_text;
+} 
+
+ ?>
+
+<link rel="stylesheet" href="<?php echo $adres ?>/css/style.css"/>
 	<div class="icsidebar">
 		<div class="entryliste">
 			<div class="listeyenile"><a id="yenile" class="btn btn-primary" style="cursor:pointer;" onclick="yenile()">Yenile</a><img class="yuklen" height="32px" src="http://www.conax.com.tr/img/loading.gif" id="yenilen"></img></div>
@@ -22,10 +32,12 @@
 							$baslikid
 						));
 						$roww=$sql->fetch(PDO::FETCH_ASSOC);
-						 
+						$isim = htmlspecialchars($roww['isim']);
+						 $link = replace_tr($isim);
+						
 					?>
 						<li>
-							<div ><a class="buton" href="?id=<?php echo $roww['id'] ?>&getir=baslik"><?php echo $roww['isim']; ?></a></div>
+							<div ><a class="buton" href="/baslik/<?php echo $link ?>--<?php echo $roww['id'] ?>/"><?php echo $isim; ?></a></div>
 							
 						</li>
 					<?php	

@@ -1,6 +1,14 @@
 <?php 
 include('vt.php');
+function replace_tr($text) {
+$text = trim($text);
+$search = array('Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü',' ', '\'');
+$replace = array('c','c','g','g','i','i','o','o','s','s','u','u','-','-');
+$new_text = str_replace($search,$replace,$text);
+return $new_text;
+} 
 $yazar = $_GET['kim'];
+$yazar = preg_replace('#-#', ' ', $yazar);
 $sql1 = $db->prepare("SELECT * FROM yazarlar WHERE kuladi= ?");
 						$sql1->execute(array(
 							$yazar
@@ -14,7 +22,7 @@ $veri = $db->query("select * from entryler where yazar='{$yazar}' Order By id DE
 
 <div class="icerik">
 		<div class="baslik">
-			<h2><a class="h3" href=""><?php echo $yazar ?> Yazar Profili</a></h2>
+			<h2><a class="h3" style="color:#337AB7;" href=""><?php echo $yazar ?> Yazar Profili</a></h2>
 		</div>
 		<div class="entryler">
 		<div class="entry" id="1">
@@ -28,7 +36,8 @@ $veri = $db->query("select * from entryler where yazar='{$yazar}' Order By id DE
 							$baslikid
 						));
 						$row = $sql->fetch(PDO::FETCH_ASSOC);
-				echo '<a href="'.$adres.'/?id='.$baslikid.'&getir=baslik">'.$row['isim'].'</a><br>';
+						 $link = replace_tr($row['isim']);
+				echo '<a href="'.$adres.'/baslik/'.$link.'--'.$baslikid.'/">'.$row['isim'].'</a> <br />';
 			}
 			?>
 			</div>

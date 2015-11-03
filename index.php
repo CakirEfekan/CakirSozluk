@@ -1,5 +1,13 @@
 <?php session_start(); 
+	if(!file_exists('vt.php')){
+		?>
+		<script type="text/javascript">
+		window.location.href = "kur";
+		</script>
+		<?php
+	}
 	require('vt.php');
+
 	include('header.php');
 ?>
 
@@ -13,19 +21,19 @@
 		<input placeholder="Başlık Ara..." id="search" type="text" style="height:25px;width:200px;"> 
 
 		<?php if(isset($_SESSION['user'])){ ?>
-		<a class="btn btn-primary" href="?getir=baslikac">Başlık Aç</a>
+		<a class="btn btn-primary" href="<?php echo $adres ?>/baslikac">Başlık Aç</a>
 		<?php } ?>
 		</div>
 	</div>
 	</div>
 	<script>
 function yenile() {
-     $("#solyan").delay(5000).load("sidebar.php");
+     $("#solyan").delay(5000).load("<?php echo $adres ?>/sidebar.php");
 	$("#yenilen").stop(true,true).fadeIn("slow",function(){ 
 setTimeout($("#yenilen").stop(true,true).fadeOut("fast"),5000); }); 
 }
 $(document).ready(function() {
-	 $("#solyan").load("sidebar.php");
+	 $("#solyan").load("<?php echo $adres ?>/sidebar.php");
 });
 </script>
 <div id="solyan" class="sidebar"></div>

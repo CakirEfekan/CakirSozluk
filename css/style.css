@@ -31,6 +31,7 @@ a{
 	line-height: 26.4px;
 	margin-top:5px;
 	padding:0;
+	color:white;
 }
 .h3 {
 	font-family: 'Helvetica Neue';
@@ -41,6 +42,7 @@ a{
 	line-height: 15.4px;
 	margin-top:12px;
 	padding:0;
+	color:white;
 }
 .p {
 	font-family: 'Helvetica Neue';
@@ -74,7 +76,7 @@ a{
 	position:absolute;
 	margin:0px;
 	padding:0px;
-	background:rgb(125, 193, 140);
+	background:#4A4A4A;
 	
 }
 .menuic{
@@ -342,4 +344,28 @@ input{
 	
 	background:transparent;
 	
+}
+.icmenu input, .yansidebar input{
+	
+	    background: #1F2124;
+    background: -moz-linear-gradient(#1F2124, #27292C);
+    background: -ms-linear-gradient(#1F2124, #27292C);
+    background: -o-linear-gradient(#1F2124, #27292C);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#1F2124), to(#27292C));
+    background: -webkit-linear-gradient(#1F2124, #27292C);
+    background: linear-gradient(#1F2124, #27292C);
+    border: 1px solid #000;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #FFF;
+    width: 270px;
+    height: 25px;
+	
+}
+.icmenu input:focus, .yansidebar input:focus{
+	 box-shadow: inset 0 0 2px #000;
+    background: #494D54;
+    border-color: #51CBEE;
+    outline: none;
 }
